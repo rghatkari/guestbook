@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "guest_book")
-public class GustBook {
+public class GuestBook {
 
     @Id
     @Column(name = "id")
@@ -22,6 +22,7 @@ public class GustBook {
     @Column(name = "message")
     private String message;
 
+    @Lob
     @Column(name = "image")
     private byte[] image;
 

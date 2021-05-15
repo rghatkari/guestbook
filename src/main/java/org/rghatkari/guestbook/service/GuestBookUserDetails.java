@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 public class GuestBookUserDetails implements UserDetails {
+    private static final long serialVersionUID = 1L;
 
     private User user;
 
@@ -57,5 +58,9 @@ public class GuestBookUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return user.isEnabled();
+    }
+
+    public User getLoggedInUser() {
+        return user;
     }
 }
